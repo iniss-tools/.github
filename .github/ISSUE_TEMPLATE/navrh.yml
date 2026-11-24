@@ -1,0 +1,46 @@
+# Nazov suboru a id poli su v odkazoch programov (ToolsCore IssueReport, web StationSimulatora) a dokumentacie - nemenit.
+name: Návrh funkcie
+description: Niečo v programe chýba alebo by mohlo fungovať lepšie.
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Návrh aj jeho prílohy sú verejné.** Jeden návrh na jedno hlásenie, aby sa dal samostatne posúdiť a uzavrieť.
+
+  - type: textarea
+    id: potreba
+    attributes:
+      label: Čo potrebujete urobiť
+      description: Úloha, pri ktorej program nepomôže alebo jej vykonanie je zdĺhavé.
+    validations:
+      required: true
+
+  - type: textarea
+    id: navrh
+    attributes:
+      label: Ako by to mohlo fungovať
+      description: Ak máte predstavu o okne, príkaze alebo výsledku. Pomôže aj náčrt.
+
+  - type: textarea
+    id: dnes
+    attributes:
+      label: Ako to riešite teraz
+
+  - type: dropdown
+    id: iniss
+    attributes:
+      label: Verzia INISS
+      options:
+        - INISS 3.39
+        - INISS2
+        - obe
+        - s INISSom nesúvisí
+
+  - type: checkboxes
+    id: kontrola
+    attributes:
+      label: Pred odoslaním
+      options:
+        - label: Najnovšia verzia programu to nevie a návrh tu ešte nie je.
+          required: true

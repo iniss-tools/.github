@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Stiahnuť najnovšiu verziu
+    url: https://iniss-tools.fvat.sk/stiahnut
+    about: Chyba už môže byť opravená.
+  - name: Dokumentácia a riešenie problémov
+    url: https://iniss-tools.fvat.sk
+    about: Návody k programom a odpovede na časté otázky.

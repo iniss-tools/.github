@@ -1,0 +1,19 @@
+# Nazov suboru a id poli su v odkazoch programov (ToolsCore IssueReport, web StationSimulatora) a dokumentacie - nemenit.
+name: Chyba v dokumentácii
+description: Na stránke dokumentácie je niečo nesprávne, nejasné alebo chýba.
+labels: [documentation]
+body:
+  - type: input
+    id: stranka
+    attributes:
+      label: Adresa stránky
+      placeholder: https://iniss-tools.fvat.sk/docs/…
+    validations:
+      required: true
+
+  - type: textarea
+    id: popis
+    attributes:
+      label: Čo je nesprávne, nejasné alebo chýba
+    validations:
+      required: true

@@ -1,0 +1,77 @@
+# Nazov suboru a id poli su v odkazoch programov (ToolsCore IssueReport, web StationSimulatora) a dokumentacie - nemenit.
+name: Nahlásenie chyby
+description: Program robí niečo zle, skončí alebo ukáže okno chyby.
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Hlásenie aj jeho prílohy sú verejné.** Log obsahuje cesty k súborom (aj meno používateľa Windows), názvy staníc a adresy liniek. Neprikladajte heslá, prístupové kľúče, registračné údaje INISSu ani údaje stanice, ktoré nemajú byť verejné. Takéto súbory pošlite na iniss.sk@gmail.com s odkazom na toto hlásenie.
+
+  - type: input
+    id: verzia
+    attributes:
+      label: Verzia programu
+      description: "Ponuka Pomocník → O programe (Informácie o programe). StationSimulator: Nastavenia → Server."
+      placeholder: "1.10.0"
+    validations:
+      required: true
+
+  - type: input
+    id: system
+    attributes:
+      label: Verzia Windows
+      description: Pri StationSimulatore aj prehliadač, ak sa chyba týka webu.
+      placeholder: Windows 11 25H2
+
+  - type: dropdown
+    id: iniss
+    attributes:
+      label: Verzia INISS
+      options:
+        - INISS 3.39
+        - INISS2
+        - iná alebo neviem
+        - s INISSom nesúvisí
+
+  - type: textarea
+    id: popis
+    attributes:
+      label: Popis
+      description: Popíšte očakávané a skutočné správanie programu.
+    validations:
+      required: true
+
+  - type: textarea
+    id: kroky
+    attributes:
+      label: Ako chybu zopakovať
+      placeholder: |
+        1. Otvoriť…
+        2. Kliknúť na…
+        3. …
+    validations:
+      required: true
+
+  - type: textarea
+    id: chyba
+    attributes:
+      label: Text z okna chyby
+      description: Do schránky ho skopíruje tlačidlo Kopírovať v okne chyby.
+      render: text
+
+  - type: textarea
+    id: prilohy
+    attributes:
+      label: Log a snímky obrazovky
+      description: "Log z dňa, keď chyba nastala: Pomocník → Otvoriť priečinok s logmi, pri StationSimulatore priečinok logs v priečinku nastavení. Súbory sem pretiahnite myšou."
+
+  - type: checkboxes
+    id: kontrola
+    attributes:
+      label: Pred odoslaním
+      options:
+        - label: Chyba nastáva v najnovšej verzii programu a ešte nie je nahlásená.
+          required: true
+        - label: Text ani prílohy neobsahujú údaje, ktoré nemajú byť verejné.
+          required: true
